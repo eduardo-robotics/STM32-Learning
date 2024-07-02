@@ -1,0 +1,53 @@
+# General
+*.o
+*.d
+*.a
+*.lib
+*.so
+*.exe
+*.out
+*.bin
+*.elf
+*.hex
+*.map
+*.lst
+*.log
+*.srec
+
+# Debug files
+*.bak
+*.bak2
+*.swp
+
+# Build directories
+/build/
+/Debug/
+/Release/
+
+# IDE-specific files
+# If you use STM32CubeIDE
+*.launch
+*.settings
+*.cproject
+*.project
+*.loadpath
+
+# If you use Keil uVision
+*.uvoptx
+*.uvprojx
+*.uvgui.*
+
+# If you use IAR Embedded Workbench
+*.eww
+*.ewd
+*.ewp
+*.ewt
+*.ewd
+settings/
+
+# VSCode specific files
+.vscode/
+
+# STM32CubeMX generated files
+*.ioc
+*.bak
