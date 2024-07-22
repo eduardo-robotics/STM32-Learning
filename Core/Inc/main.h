@@ -27,6 +27,7 @@ extern "C" {
 #endif
 
 #include "generated.h"
+#include "chapter2.h"
 
 #ifdef __cplusplus
 }
