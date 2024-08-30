@@ -3,5 +3,5 @@
 /* Main */
 
 int main(void) {
-  LED_Blink_BSRR();
+  Switch_Read_With_LED();
 }

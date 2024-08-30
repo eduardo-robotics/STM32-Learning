@@ -38,3 +38,17 @@ void LED_Blink_BSRR(void) {
     delayMs(1000);
   }
 }
+
+// Reads a switch and turns on LED
+void Switch_Read_With_LED(void) {
+  RCC->AHB1ENR |= 1 | (1<<2); // Enables clock for GPIOA & GPIOC
+  GPIOA->MODER |= 1<<10; // Sets PA5 as output
+  GPIOC->MODER &= ~(1<<27 | 1<<26); // Sets PC13 as input
+
+  while(1) {
+    if(GPIOC->IDR & (1<<13)) // Reads PC13, If PC13 is HIGH
+      GPIOA->ODR &= ~(1<<5); // Sets PA5 to LOW
+    else
+      GPIOA->ODR |= 1<<5; // Sets PA5 to HIGH
+  }
+}
