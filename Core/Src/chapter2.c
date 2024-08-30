@@ -34,7 +34,7 @@ void LED_Blink_BSRR(void) {
     // other bits as is, we want to reset them to 0
     GPIOA->BSRR = 1<<5; // Sets PA5 to HIGH
     delayMs(1000);
-    GPIOA->ODR = 1<<21; // Sets PA5 to LOW
+    GPIOA->BSRR = 1<<21; // Sets PA5 to LOW
     delayMs(1000);
   }
 }
